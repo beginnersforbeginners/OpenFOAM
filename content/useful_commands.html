@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html>
+    <!-- ********** This is the head ********** -->
+    <head>
+    <!-- Google adsense -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6498610035685052"
+     crossorigin="anonymous"></script>
+
+        <!--Font sourcing-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>Useful basic commands in Linux</title>
+    
+    <!--Styles-->
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/nav.css">
+    
+    </head>
+    <!-- ********** This is the head ********** -->
+    <!-- ************************************** -->
+    <!-- ********** This is the body ********** -->
+    <body>
+    <!-- ** Header ** -->
+    <header>
+        <div class="header-left">
+            <a class="home-container" href="https://www.beginnersforbeginners.com" target="_blank">
+                <div><img class="home-icon" src="../../icons/home.svg"></div>
+                <div class="home-text">Home</div>            
+            </a>
+            <div class="menu">
+
+            </div>
+        </div>
+
+        <div class="logo-container">
+            <img class="logo-icon" src="../../icons/Full logo.png">            
+        </div>
+        
+        <div class="header-right">
+            <div class="header-right-text"></div>
+        </div>
+    </header>
+    
+
+    <!-- ** Main content ** -->
+    <div class="main-title">
+        Navigating OpenFOAM
+    </div>
+
+    <!-- ** Table of contents ** -->
+    <div class="table-of-contents">
+        This section will cover the following:
+    <div class="content-paragraph">
+        <ol>
+            <li>Where is OpenFOAM located in your computer?</li>
+            <li>Navigating files</li>
+            <li>Creating, moving, and removing files and folders</li>
+            <li>Exercises</li>
+            <li>OpenFOAM aliases</li>
+
+        </ol>
+    </div>
+    </div>
+      
+    <!-- ** Where is OpenFOAM located in your computer ** -->
+    <div class="content-step-by-step"> 
+        <div class="content-step">
+            <div class="step-title">
+                Where is OpenFOAM located in your computer?
+            </div>
+    
+            <div class="content-paragraph">
+                To navigate OpenFOAM, understanding some Linux commands is necessary. 
+                If you have followed my previous tutorial on downloading OpenFOAM,
+                your OpenFOAM folder should be located in the path <i>/usr/lib/openfoam/openfoam2412</i>. 
+                If you had not download OpenFOAM, please use this 
+                <a target="_blank" href="../openfoam_installation_resources/openfoam_installation.html">link</a> 
+                to go to my page on OpenFOAM download guide.
+            </div>
+
+            <div class="content-paragraph">
+                If you have downloaded OpenFOAM but could not find your OpenFOAM folder, try typing <i>"foam"</i> in the terminal and press "Enter"
+            </div>
+
+            <div class="step-video-container">
+                <video class="step-video" preload="auto" autoplay muted loop src="image/foam_alias.mp4">
+            </div>
+
+            <div class="content-paragraph">
+                If the above fails, go through <strong>Navigating files</strong> in the below may help you in locating your OpenFOAM installation
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ** Navigating files ** -->
+    <div class="content-step-by-step"> 
+        <div class="content-step">
+            <div class="step-title">
+                Navigating files
+            </div>
+       
+
+            <div class="sub-step-content">
+                <div class="sub-step-title">1. View folders in "window" format using <i>explorer.exe</i></div>
+                <div class="code-text">explorer.exe .</div>
+                <div class="step-video-container">
+                    <video class="step-video" preload="auto" autoplay muted loop src="image/explorerExe.mp4">
+                </div>
+                <div class="sub-step-description">The <strong>dot "."</strong> at the end of the command indicate <strong>current directory</strong></div>
+            </div>
+
+            <div class="sub-step-content">
+                <div class="sub-step-title">2. List available folders using <i>ls</i> command</div>
+                <div class="short-code-text-container">
+                    <div class="short-code-text">ls</div>
+                    <div class="short-text"> or </div>
+                    <div class="short-code-text">l</div>
+                    <div class="short-text"> or to show all subdirectories </div>
+                    <div class="short-code-text">ls *</div>
+                </div>
+                <div class="sub-step-description">the three commands above is shown in the video below</div>
+                <div class="step-video-container">
+                    <video class="step-video" preload="auto" muted controls src="image/ls_command.mp4">
+                </div>
+            </div>
+
+            <div class="sub-step-content">
+                <div class="sub-step-title">3. Changing directory / current file location </div>
+                <div class="short-code-text-container">
+                    <div class="short-code-text">cd ..</div>
+                    <div class="short-text"> or </div>
+                    <div class="short-code-text">cd [filename]</div>
+                </div>
+                <div class="sub-step-description">The <strong>double dot ".."</strong> to indicate previous directory</div>
+                <div class="sub-step-description">[filename] to specify the path to change directory to</div>
+                <div class="sub-step-description"></div>
+                <div class="step-video-container">
+                    <video class="step-video" preload="auto" controls muted src="image/change_directory.mp4">
+                </div>
+            </div>
+    </div>
+    </div>
+
+
+
+    <!-- ** Files and Folders ** -->
+    <div class="content-step-by-step"> 
+        <div class="content-step">
+            <div class="step-title">
+                Files and folders
+            </div>
+       
+            <div class="content-paragraph">
+                This section includes creating, copying, moving and deleting files. Differentiating between files and folders: 
+                <ul>
+                    <li>Folders contain other items</li>
+                    <li>Files is just a text document i.e: txt files</li>
+                </ul>
+            </div>
+
+
+            <div class="sub-step-content">
+                <div class="sub-step-title">1. Creating an empty folder</div>
+                <div class="code-text">mkdir &lt;folderName&gt;</div>
+                <div class="short-code-text-container">
+                    <div class="short-text"> Creating a new folder named newFolder: </div>
+                    <div class="short-code-text">mkdir newFolder</div>
+                </div>
+                <div class="step-video-container">
+                    <video class="step-video" preload="auto" controls muted src="image/mkdir.mp4">
+                </div>
+            </div>
+
+            <div class="sub-step-content">
+                <div class="sub-step-title">2. Creating a text file</div>
+                <div class="code-text">touch &lt;fileName&gt;</div>
+                
+                <div class="short-code-text-container">
+                    <div class="short-text"> Example: </div>
+                    <div class="short-code-text">touch helloWorld.txt</div>
+                </div>
+                
+                <div class="step-video-container">
+                    <video class="step-video" preload="auto" muted controls src="image/touch.mp4">
+                </div>
+            </div>
+
+            <div class="sub-step-content">
+                <div class="sub-step-title">3. Moving or renaming files </div>
+                <div class="content-paragraph">
+                    Renaming file
+                </div>
+                <div class="code-text">mv &lt;oldFileName&gt; &lt;newFileName&gt;</div>
+                <div class="short-code-text-container">
+                    <div class="short-text"> Example: </div>
+                    <div class="short-code-text">mv helloWorld.txt hiWorld.txt</div>
+                </div>
+                <div class="step-video-container">
+                    <video class="step-video" preload="auto" muted controls src="image/rename.mp4">
+                </div>
+                <div class="content-paragraph">
+                    Moving file
+                </div>
+                <div class="code-text">mv &lt;fileName&gt; &lt;newDirectory&gt;/&lt;fileName&gt; </div>
+                <div class="short-code-text-container">
+                    <div class="short-text"> Example: </div>
+                    <div class="short-code-text">mv hiWorld.txt ../hiWorld.txt</div>
+                </div>
+                <div class="step-video-container">
+                    <video class="step-video" preload="auto" muted controls src="image/move.mp4">
+                </div>
+            </div>
+
+            <div class="sub-step-content">
+                <div class="sub-step-title">4. Copying files or folders </div>
+                <div class="content-paragraph">
+                    Copying file
+                </div>
+                <div class="code-text">cp &lt;fileName&gt; &lt;fileName2&gt;</div>
+                <div class="short-code-text-container">
+                    <div class="short-text"> Example: </div>
+                    <div class="short-code-text">cp hiWorld.txt helloWorld.txt</div>
+                </div>
+                <div class="step-video-container">
+                    <video class="step-video" preload="auto" muted controls src="image/copyFile.mp4">
+                </div>
+
+                <div class="content-paragraph">
+                    Copying folder
+                </div>
+                <div class="code-text">cp -r &lt;fileName&gt; &lt;fileName2&gt; </div>
+                <div class="short-code-text-container">
+                    <div class="short-text"> Example: </div>
+                    <div class="short-code-text">cp -r newFolder newFolder2</div>
+                </div>
+                <div class="step-video-container">
+                    <video class="step-video" preload="auto" controls muted src="image/copyFolder.mp4">
+                </div>
+            </div>
+
+            <div class="sub-step-content">
+                <div class="sub-step-title">5. Removing files or folders </div>
+                <div class="content-paragraph">
+                    Removing file
+                </div>
+                <div class="code-text">rm &lt;fileName&gt;</div>
+                <div class="short-code-text-container">
+                    <div class="short-text"> Example: </div>
+                    <div class="short-code-text">rm helloWorld.txt</div>
+                </div>
+                <div class="step-video-container">
+                    <video class="step-video" preload="auto" controls muted  src="image/rmFile.mp4">
+                </div>
+
+                <div class="content-paragraph">
+                    Removing folder
+                </div>
+                <div class="code-text">rm -r &lt;folderName&gt;</div>
+                <div class="short-code-text-container">
+                    <div class="short-text"> Example: </div>
+                    <div class="short-code-text">rm -r newFolder2</div>
+                </div>
+                <div class="step-video-container">
+                    <video class="step-video" preload="auto" controls muted src="image/rmFolder.mp4">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ** Exercises ** -->
+    <div class="content-step-by-step"> 
+        <div class="content-step">
+            <div class="step-title">
+                Exercises
+            </div>
+       
+            <div class="sub-step-description">
+                This is to test your understanding of the above contents
+                 by creating user files needed for OpenFOAM.
+            </div>
+
+            <div class="sub-step-content">
+                <div class="sub-step-title">1. Create a folder for the directory <i>run</i></div>
+                <div class="short-code-text-container">
+                    <div class="short-text"> Type this: </div>
+                    <div class="short-code-text">run</div>
+                </div>
+                <div class="sub-step-description">It will show an error, stating there is no path to the run directory</div>
+                <div class="sub-step-description">Your task is to create the folder for the run directory. An example solution is shown in the vidoe below.</div>
+                <div class="step-video-container">
+                    <video class="step-video" preload="auto" controls muted src="image/run.mp4">
+                </div>
+                
+                <div class="sub-step-title">2. Now try creating a folder for <i>uapp</i> !</div>
+            </div>
+    </div>
+    </div>
+
+
+
+    </body>
+</html>
