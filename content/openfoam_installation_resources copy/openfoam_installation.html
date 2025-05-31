@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html>
+    <!-- ********** This is the head ********** -->
+    <head>
+    <!-- Google adsense -->
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6498610035685052"
+     crossorigin="anonymous"></script>
+
+        <!--Font sourcing-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>OpenFOAM Installation</title>
+    
+    <!--Styles-->
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/nav.css">
+    
+    </head>
+    <!-- ********** This is the head ********** -->
+    <!-- ************************************** -->
+    <!-- ********** This is the body ********** -->
+    <body>
+    <!-- ** Header ** -->
+    <header>
+        <div class="header-left">
+            <a class="home-container" href="https://www.beginnersforbeginners.com" target="_self">
+                <div><img class="home-icon" src="../../icons/home.svg"></div>
+                <div class="home-text">Home</div>            
+            </a>
+            <div class="menu">
+
+            </div>
+        </div>
+
+        <div class="logo-container">
+            <img class="logo-icon" src="../../icons/Full logo.png">            
+        </div>
+        
+        <div class="header-right">
+            <div class="header-right-text"></div>
+        </div>
+    </header>
+    
+
+    <!-- ** Main content ** -->
+    <div class="main-title">
+        Getting Started with OpenFOAM
+    </div>
+
+    <!-- ** Table of contents ** -->
+    <div class="table-of-contents">
+        This section will cover the following:
+    <div class="content-paragraph">
+        <ol>
+            <li>Knowing OpenFOAM versions</li>
+            <li>Downloading Ubuntu</li>
+            <li>Downloading OpenFOAM</li>
+            <li>Test run</li>
+
+        </ol>
+    </div>
+    </div>
+
+
+    <!-- ** Knowing OpenFOAM versions ** -->
+    <div class="main-content-container-left-right"> 
+        <div class="text-content">
+            <div class="content-title">
+                Knowing OpenFOAM Versions
+            </div>
+    
+            <div class="content-paragraph">
+                Two versions of OpenFOAM available - <a href="https://openfoam.org/">OpenFOAM Foundation</a> and <a href="https://www.openfoam.com/">OpenFOAM ESI</a> , 
+                both are used by researchers and published papers covers both of these versions. 
+                <p>Here's my suggestion to which one to use (according to priority):</p>
+            </div>
+    
+            <div class="content-points">
+                <ul>
+                    <li>
+                        <strong>Use the same version as your organisation</strong>
+                        <div>
+                            Recommended for code compatibility 
+                            and sharing of projects. 
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Choose OpenFOAM ESI (ending with v2412)</strong>
+                        <div>
+                        It is a more widely used version, 
+                        which means you will be likely to get help from OpenFOAM forums. 
+                        There are also lots of <strong>YouTube resources</strong> that uses this version of OpenFOAM. 
+                        <div>
+                    </li>
+                    <li>
+                        <strong>All subsequent guides are using OpenFOAM ESI version</strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="image-content">
+            <div class="image-container">
+                <img class="image-icon" src="image/openfoam-esi.png">
+                <div class="image-caption">OpenFOAM ESI website</div>
+            </div>
+
+            <div class="image-container">
+                <img class="image-icon" src="image/openfoam-foundation.png">
+                <div class="image-caption">OpenFOAM foundation website</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ** Installing Ubuntu ** -->
+    <div class="content-step-by-step"> 
+        <div class="content-step">
+            <div class="step-title">
+                Installing Ubuntu
+            </div>
+    
+            <div class="content-paragraph">
+                OpenFOAM runs in a Linux environment 
+                (An operating system as like MacOS, Windows, and Linux). 
+                However, you can run OpenFOAM in windows
+                through Windows Subsystem for Linux (WSL)
+                which you do not need to have another 
+                operating system in your PC.
+            </div>
+    
+            <div class="sub-step-content">
+                <div class="sub-step-title">1. Go search in task bar, and open Windows PowerShell</div>
+                <div class="sub-step-description">Can be opened by searching "Windows PowerShell" at the bottom search bar</div>
+                <div class="step-image-container">
+                    <img class="step-image" style="width: 50%;" src="image/powershell.png">
+                </div>
+            </div>
+
+
+            <div class="sub-step-content">
+                <div class="sub-step-title">2. Type the below command and press "Enter"</div>
+                <div class="code-text">wsl -l</div>
+                <div class="step-image-container">
+                    <img class="step-image" src="image/ubuntu-wsl-l.png">
+                </div>
+                <div class="sub-step-description">
+                    Skip this section and go to <strong>Download OpenFOAM</strong> section if there
+                    is a Ubuntu installation exist
+                </div>
+            </div>
+
+            <div class="sub-step-content">
+                <div class="sub-step-title">3. Type the below command and press "Enter"</div>
+                <div class="code-text">wsl.exe --list --online</div>
+
+                <div class="step-image-container">
+                    <img class="step-image"  src="image/ubuntu-wsl-list.png">
+                </div>
+            </div>
+
+           
+            <div class="sub-step-content">
+                <div class="sub-step-title">4. Type the below command and press "Enter"</div>
+                <div class="code-text">wsl.exe --install Ubuntu-24.04</div>
+                <div class="sub-step-description">
+                    This is how the installation will look like. 
+                    You may skip the video, it is around 1 minute long.
+                </div>
+                <div class="step-image-container">
+                    <video class="step-image" controls>
+                        <source src="image/ubuntu-installation-video.mp4" type="video/mp4">
+                    </video>    
+                </div>
+            </div>
+
+            <div class="sub-step-content">
+                <div class="sub-step-title">5. Type below command and press "Enter"</div>
+                <div class="code-text">wsl.exe -d Ubuntu-24.04</div>
+                <div class="sub-step-description">
+                    <p></p>
+                    <strong>Set up your username and password.</strong> 
+                    <p>When typing your password, you won't see any changes on the screen (No ***** will appear). 
+                    It is normal, continue typing your password and press "Enter"</p>
+
+                </div>
+                <div class="step-image-container">
+                    <img class="step-image" src="image/ubuntu-set-up.png">
+                </div>
+                
+                <div class="sub-step-description">
+                    Your Ubuntu set up is successful if the following appears 
+                </div>
+                <div class="step-image-container">
+                    <img class="step-image" src="image/ubuntu-set-up-successful.png">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ** Downloading OpenFOAM ** -->
+    <div class="content-step-by-step"> 
+        <div class="content-step">
+            <div class="step-title">
+                Downloading OpenFOAM
+            </div>
+       
+
+            <div class="sub-step-content">
+                <div class="sub-step-title">1. Using Ubuntu terminal (the application downloaded above), enter the folloing lines </div>
+                <div class="code-text">curl https://dl.openfoam.com/add-debian-repo.sh | sudo bash</div>
+                <div class="sub-step-description">Enter the password set earlier. There will not be any changes when typing. (No **** symbol)</div>
+                <div class="step-image-container">
+                    <img class="step-image" src="image/curl-OpenFOAM.png">
+                </div>
+                <div class="sub-step-description">Then paste the following and press "Enter"</div>
+                <div class="code-text">sudo apt-get update</div>
+                <div class="step-image-container">
+                    <img class="step-image" src="image/apt-get-update.png">
+                </div>
+                <div class="sub-step-description">Then paste the following and press "Enter"</div>
+                <div class="code-text">sudo apt-get install openfoam2412-default</div>
+                <div class="sub-step-description">Note: Do not close the Ubuntu terminal during installation.</div>
+            </div>
+
+            <div class="sub-step-content">
+                <div class="sub-step-title">2. Once the download is complete, you will see a screen like this, do not close the Ubuntu terminal. Copy the text in your terminal.</div>
+                <div class="step-image-container">
+                    <img class="step-image" src="image/bashrc-copy.png">
+                </div>
+            </div>
+
+            <div class="sub-step-content">
+                <div class="sub-step-title">3. Open a bashrc text file by typing the following and press "Enter"
+                </div>
+                <div class="code-text">nano ~/.bashrc</div>
+                <div class="step-image-container">
+                    <img class="step-image" src="image/bashrc.png">
+                </div>
+            </div>
+
+            <div class="sub-step-content">
+                <div class="sub-step-title">
+                    4. Paste the text that you copied in step 2 at the bottom of the bashrc text file,
+                    save and close the text file.
+                </div>
+                <div class="step-image-container">
+                    <img class="step-image" src="image/bashrc.png">
+                </div>
+                <div class="sub-step-description">
+                    Tips:
+                    <ul>
+                        <li>To scroll to the bottom, press "pg dn"</li>
+                        <li>To save, press "ctrl" + "o"</li>
+                        <li>To exit, press "ctrl" + "x"</li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sub-step-content">
+                <div class="sub-step-title">5. Type the following and press "Enter"</div>
+                <div class="code-text">source ~/.bashrc</div>
+            </div>
+
+            <div class="sub-step-content">
+                <div class="sub-step-title">
+                    6. To test whether the installation works, 
+                    type "blockMesh" and press "Enter".
+                </div>
+                <div class="step-image-container">
+                    <img class="step-image" src="image/blockMesh-successful.png">
+                </div>
+                <div class="sub-step-description">If blockMesh runs as the above screenshot, the installation is successful👏.</div>
+            </div>
+
+        </div>
+    </div>
+
+    </body>
+</html>
